@@ -115,13 +115,13 @@ class TwoNumSumBinary(object):
           (index + 1 <= self.max_index() and self.numbers[index + 1] == n))):
         return True
     return False
+
   # Slightly modified binary search - returns a list index that
   # represents either where the element is, or the index of the
   # element to the right of where the supplied value would be
   # inserted. In cases where the value is greater than any value
   # in the list, returns -1
   # O(log(n))
-  
   def binary_search(self, start, end, val):
     print self.numbers, start, end, val
     if end - start <= 1:
@@ -148,6 +148,7 @@ class TwoNumSumPointers(object):
     self.numbers = []
 
   # Insert the value into the list while mainting sorted order
+  # O(log(n))
   def insert(self, num):
     bisect.insort(self.numbers, num)
 
@@ -158,6 +159,7 @@ class TwoNumSumPointers(object):
   # Repeat this process until either the two examined values sum to v, or until
   # both the left and right pointers point at the same number (meaning we
   # couldn't find the sum)
+  # O(n)
   def check(self, num):
     left = 0
     right = len(self.numbers) - 1
