@@ -8,8 +8,8 @@ class TwoNumSumNaive(object):
   def insert(self, num):
     self.numbers.append(num)
 
-  # Iterate over the list once and for each items iterate over the list again
-  # from the next item forward and check if each pair sums to the requireed
+  # Iterate over the list once and for each item iterate over the list again
+  # from the next item forward, and check if each pair sums to the required
   # value
   # O(n^2)
   def check(self, num):
@@ -21,7 +21,7 @@ class TwoNumSumNaive(object):
 
 
 # One of my favourite solutions, uses a dictionary to store all inserted values
-# and the nuber of times they have been inserted.
+# and the number of times they have been inserted.
 class TwoNumSumMap(object):
   def __init__(self):
     self.numbers = {}
